@@ -1,9 +1,9 @@
-SRCS			= megaphone.cpp
+SRCS			= Contact.cpp Phonebook.cpp main.cpp
 OBJS			= $(SRCS:.cpp=.o)
 CPP				= c++
 RM				= rm -f
 CPPFLAGS		= -Wall -Wextra -Werror -std=c++98
-NAME			= megaphone
+NAME			= Phonebook
 MAGENTA			= "\033[35m"
 GREEN			= "\033[32m"
 RED				= "\033[31m"
