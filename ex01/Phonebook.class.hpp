@@ -13,12 +13,16 @@ class Phonebook
 
 	public:
 	
-		Phonebook( void );
-		~Phonebook( void );
-		Contact getContact(int index);
+		Phonebook();
+		~Phonebook();
+		//Contact getContact(int index);
 				
 		//add
+		void add(void);
+		
 		//search
+		void search(void);
+
 };
 
 #endif

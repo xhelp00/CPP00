@@ -3,8 +3,22 @@
 int main(void)
 {
 
+	Phonebook		pho;
+	std::string		str;
 
-	// index % 8 to replacing "oldest"
-	
+	while(str != "EXIT")
+	{
+		std::cout << "Enter ADD / SEARCH / EXIT > ";
+		std::getline(std::cin, str);
+		if (str == "ADD")
+			pho.add();
+		else if (str == "SEARCH")
+			pho.search();
+		if (std::cin.eof())
+		{
+			std::cout << std::endl;
+			return 0;
+		}
+	}	
 	return 0;
 }

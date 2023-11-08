@@ -20,9 +20,14 @@ class Contact
 	//destructor
 	~Contact( void );
 
-	//set method
-	void setContact (std::string fn, std::string ln, std::string nn, std::string pn, std::string sec);
-	
+	//set methods
+	void setFirstName (std::string str);
+	void setLastName (std::string str);
+	void setNickName (std::string str);
+	void setPhoneNumber (std::string str);
+	void setSecret (std::string str);
+
+
 	//get methods
 	std::string getFirstName() const;
 	std::string getLastName() const;

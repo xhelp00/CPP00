@@ -9,17 +9,33 @@ Contact::~Contact()
 {
 
 }
-
-void Contact::setContact(std::string fn, std::string ln, std::string nn, std::string pn, std::string sec)
+//set methods
+void Contact::setFirstName(std::string str)
 {
-	this->_firstName = fn;
-	this->_lastName = ln;
-	this->_nickName = nn;
-	this->_phoneNumber = pn;
-	this->_darkestSecret = sec;
+	this->_firstName = str;
 }
 
+void Contact::setLastName(std::string str)
+{
+	this->_lastName = str;
+}
 
+void Contact::setNickName(std::string str)
+{
+	this->_nickName = str;
+}
+
+void Contact::setPhoneNumber(std::string str)
+{
+	this->_phoneNumber = str;
+}
+
+void Contact::setSecret(std::string str)
+{
+	this->_darkestSecret = str;
+}
+
+//get methods
 std::string Contact::getFirstName() const
 {
 	return this->_firstName;
