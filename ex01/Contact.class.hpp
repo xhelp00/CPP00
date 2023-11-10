@@ -15,10 +15,10 @@ class Contact
 	public:
 
 	//constructor
-	Contact( void );
+	Contact();
 
 	//destructor
-	~Contact( void );
+	~Contact();
 
 	//set methods
 	void setFirstName (std::string str);

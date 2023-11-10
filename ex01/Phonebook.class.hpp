@@ -7,22 +7,18 @@ class Phonebook
 {
 
 	private:
-
 		Contact _contacts[8];
 		int _index;
 
 	public:
-	
 		Phonebook();
 		~Phonebook();
-		//Contact getContact(int index);
-				
 		//add
-		void add(void);
-		
+		void add();
 		//search
-		void search(void);
-
+		void search();
+		//print
+		void print(Contact contact);
 };
 
 #endif

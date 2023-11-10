@@ -3,19 +3,15 @@
 Phonebook::Phonebook()
 {
 	this->_index = 0;
+	std::cout << "+---------------------------------------------------------+" << std::endl;
+	std::cout << "|  Welcome to the 80s and their unbelievable technology!  |" << std::endl;
+	std::cout << "+---------------------------------------------------------+" << std::endl;
 }
 
 Phonebook::~Phonebook()
 {
-
+	std::cout << "¯\\_(ツ)_/¯" << std::endl;
 }
-
-/* 
-Contact Phonebook::getContact(int index)
-{
-	return this->_contacts[_index % 8];
-}
- */
 
 void Phonebook::add()
 {
@@ -26,7 +22,7 @@ void Phonebook::add()
 		std::cout << "You are about to replace " << this->_contacts[this->_index % 8].getFirstName() << " which is the oldest contact." << std::endl;
 	while (!std::cin.eof() && str == "")
 	{
-		std::cout << "Enter a first name: ";
+		std::cout << "Enter first name: ";
 		if (std::getline(std::cin, str) && str != "")
 			this->_contacts[this->_index % 8].setFirstName(str);
 	}
@@ -66,7 +62,39 @@ void Phonebook::add()
 
 void Phonebook::search()
 {
+	
+	std::string	str;
+
 	std::cout << "+----------+----------+----------+----------+" << std::endl;
 	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
 	std::cout << "+----------+----------+----------+----------+" << std::endl;
+
+	if (!count(this->_contacts))
+	{
+		std::cout << std::endl << "¯\\_(ツ)_/¯ Phonebook is empty! ¯\\_(ツ)_/¯" << std::endl;
+		return ;
+	}
+
+	while (!std::cin.eof())
+	{
+		std::cout << "Select index for details: ";
+		if (std::getline(std::cin, str) && str != "")
+		{
+			if (str.size() == 1 && str[0] >= '1' && str[0] <= '8' && this->_contacts[str[0] - 1 - '0'].getFirstName().size())
+				break ;
+		}
+		if (str != "")
+			std::cout << "¯\\_(ツ)_/¯ Invalid index! ¯\\_(ツ)_/¯" << std::endl;
+	}
+	if (!std::cin.eof())
+		this->print(this->_contacts[str[0] - 1 - '0']);
+}
+
+void	Phonebook::print(Contact contact)
+{
+	std::cout << "First Name: " << contact.getFirstName() << std::endl;
+	std::cout << "Last Name: " << contact.getLastName() << std::endl;
+	std::cout << "Nickname: " << contact.getNickName() << std::endl;
+	std::cout << "Phone Number: " << contact.getPhoneNumber() << std::endl;
+	std::cout << "Darkest Secret: " << contact.getSecret() << std::endl;
 }
