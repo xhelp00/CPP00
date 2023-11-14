@@ -3,14 +3,14 @@
 # include <iostream>
 
 
-HumanA::HumanA(std::string name, Weapon weapon) {
+HumanA::HumanA(std::string name, Weapon &weapon): _weapon(weapon) {
 	this->_name = name;
-	this->_weapon = weapon;
+	//this->_weapon = weapon;
 }
 
-HumanA::HumanA() {
+/*HumanA::HumanA() {
 
-}
+}*/
 
 HumanA::~HumanA() {
 
