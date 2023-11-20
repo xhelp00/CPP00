@@ -14,13 +14,13 @@ int main(int ac, char **av)
 	{
 		case 0:
 			harl.complain("DEBUG");
-			//fall through
+			__attribute__((fallthrough));
 		case 1:
 			harl.complain("INFO");
-			//fall through
+			__attribute__((fallthrough));
 		case 2:
 			harl.complain("WARNING");
-			//fall through
+			__attribute__((fallthrough));
 		case 3:
 			harl.complain("ERROR");
 			break ;

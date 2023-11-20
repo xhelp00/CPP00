@@ -1,5 +1,6 @@
 #include "Fixed.hpp"
 
+
 const int		Fixed::_FRACTIONAL = 8;
 
 Fixed::Fixed(): _fixedPoint(0)

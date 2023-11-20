@@ -66,3 +66,98 @@ std::ostream &operator<<(std::ostream &stream, Fixed const &other)
 	stream << other.toFloat();
 	return stream;
 }
+
+//ex02
+bool Fixed::operator>(const Fixed& other) const
+{
+	return this->_fixedPoint > other._fixedPoint;
+}
+
+bool Fixed::operator<(const Fixed& other) const
+{
+	return this->_fixedPoint < other._fixedPoint;
+}
+
+bool Fixed::operator>=(const Fixed& other) const
+{
+	return this->_fixedPoint >= other._fixedPoint;
+}
+
+bool Fixed::operator<=(const Fixed& other) const
+{
+	return this->_fixedPoint <= other._fixedPoint;
+}
+
+bool Fixed::operator==(const Fixed& other) const
+{
+	return this->_fixedPoint == other._fixedPoint;
+}
+
+bool Fixed::operator!=(const Fixed& other) const
+{
+	return this->_fixedPoint != other._fixedPoint;
+}
+
+Fixed Fixed::operator+(const Fixed& other) const
+{
+	return this->toFloat() + other.toFloat();
+}
+Fixed Fixed::operator-(const Fixed& other) const
+{
+	return this->toFloat() - other.toFloat();
+}
+Fixed Fixed::operator*(const Fixed& other) const
+{
+	return this->toFloat() * other.toFloat();
+}
+Fixed Fixed::operator/(const Fixed& other) const
+{
+	return this->toFloat() / other.toFloat();
+}
+Fixed& Fixed::operator++(void)
+{
+	this->_fixedPoint++;
+	return *this;
+}
+Fixed& Fixed::operator--(void)
+{
+	this->_fixedPoint--;
+	return *this;
+}
+Fixed Fixed::operator++(int)
+{
+	Fixed temp(*this);
+	this->_fixedPoint++;
+	return temp;
+}
+Fixed Fixed::operator--(int)
+{
+	Fixed temp(*this);
+	this->_fixedPoint--;
+	return temp;
+}
+
+Fixed& Fixed::min(Fixed& x, Fixed& y)
+{
+	if (x.getRawBits() < y.getRawBits())
+		return x;
+	return y;
+}
+Fixed& Fixed::max(Fixed& x, Fixed& y)
+{
+	if (x.getRawBits() < y.getRawBits())
+		return y;
+	return x;
+}
+const Fixed& Fixed::min(const Fixed& x, const Fixed& y)
+{
+	if (x.getRawBits() < y.getRawBits())
+		return x;
+	return y;
+}
+const Fixed& Fixed::max(const Fixed& x, const Fixed& y)
+{
+	if (x.getRawBits() < y.getRawBits())
+		return y;
+	return x;
+}
