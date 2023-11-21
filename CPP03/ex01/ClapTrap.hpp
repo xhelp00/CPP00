@@ -6,7 +6,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 				std::string		_name;
 				unsigned int	_hp;
 				unsigned int	_energy;
@@ -17,6 +17,7 @@ class ClapTrap
 				/// assignment operator overload
 				/// destructor
 				/// aka OCCF part
+				ClapTrap();
 				ClapTrap(std::string name);
 				ClapTrap(const ClapTrap& other);
 				ClapTrap& operator=(const ClapTrap& other);

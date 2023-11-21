@@ -1,5 +1,8 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap()
+{}
+
 ClapTrap::ClapTrap(std::string name)
 {
 	this->_name = name;
@@ -11,14 +14,14 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::ClapTrap(const ClapTrap& other)
 {
-	std::cout << "Copy constructor called." << std::endl;
+	std::cout << "Copy ClapTrap constructor called." << std::endl;
 
 	*this = other;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
-	std::cout << "Copy assignment operator called." << std::endl;
+	std::cout << "Copy ClapTrap assignment operator called." << std::endl;
 	this->_name = other._name;
 	this->_hp = other._hp;
 	this->_energy = other._energy;
