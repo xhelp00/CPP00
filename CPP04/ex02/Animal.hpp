@@ -13,7 +13,8 @@ class Animal
 				Animal(const Animal& other);
 				Animal& operator=(const Animal& other);
 				virtual ~Animal();
-				virtual void makeSound() const;
+				virtual void makeSound() const = 0; // need to declare at least one pure virtual function within the class
+													//from standard 11 derived classes use keyword "override" when using this function
 				virtual std::string getType() const;
 				virtual void readBrain() const;
 };

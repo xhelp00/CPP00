@@ -12,6 +12,10 @@ int main()
 	const Animal* i = new Cat();
 	delete j;//should not create a leak
 	delete i;
+	
+	//negative test that Animal cannot have an instance
+	//const Animal *test = new Animal();
+
 	}
 	//stepans tests
 	{
