@@ -8,11 +8,11 @@ Brain::Brain()
 
 Brain::Brain(const Brain& other)
 {
-	delete[] this->_ideas;
+	//delete[] this->_ideas;
 	this->_ideas = new std::string[100];
 
 	for (int i = 0; i < 100; i++)
-		this->_ideas[i] = other._ideas[i] + " copy.";
+		this->_ideas[i] = "Copy " + other._ideas[i];
 
 	std::cout << "Brain copy constructor called." << std::endl;
 }

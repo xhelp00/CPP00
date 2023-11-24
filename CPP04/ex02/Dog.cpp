@@ -21,7 +21,7 @@ Dog::Dog(const Dog& other): Animal(other)
 	// if other._brain exist
 	if (other._brain)
 		_brain = new Brain(*other._brain);
-	*this = other;
+	//*this = other;
 	std::cout << "Copy Dog constructor called." << std::endl;
 }
 

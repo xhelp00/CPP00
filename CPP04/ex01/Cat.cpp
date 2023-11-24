@@ -21,7 +21,7 @@ Cat::Cat(const Cat& other): Animal(other)
 	// if other._brain exist
 	if (other._brain)
 		_brain = new Brain(*other._brain);
-	*this = other;
+	//*this = other;
 	std::cout << "Copy Cat constructor called." << std::endl;
 }
 

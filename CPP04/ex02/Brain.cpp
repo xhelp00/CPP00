@@ -8,7 +8,7 @@ Brain::Brain()
 
 Brain::Brain(const Brain& other)
 {
-	delete[] this->_ideas;
+	//delete[] this->_ideas;
 	this->_ideas = new std::string[100];
 
 	for (int i = 0; i < 100; i++)

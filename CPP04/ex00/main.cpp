@@ -21,5 +21,11 @@ std::cout << x->getType() << " " << std::endl;
 x->makeSound();
 metawrong->makeSound();
 
+delete i;
+delete j;
+delete x;
+delete meta;
+delete metawrong;
+
 return 0;
 }
