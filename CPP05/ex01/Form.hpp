@@ -3,8 +3,6 @@
 
 #include "Bureaucrat.hpp"
 
-#include <string>
-
 class Form
 {
 	private:
@@ -20,7 +18,13 @@ class Form
 			Form& operator=(const Form &other);
 			~Form();
 
-			void beSigned(Bureaucrat bureaucrat);
+
+			const std::string&	getName() const;
+			bool				getSigned() const;
+			int					getGradeSign() const;
+			int					getGradeExec() const;
+
+			void beSigned(const Bureaucrat& bureaucrat);
 			
 
 			class GradeTooLowException: public std::exception 
@@ -34,6 +38,8 @@ class Form
 			};
 
 };
+
+std::ostream&	operator<<(std::ostream& o, const Form& form);
 
 
 #endif
