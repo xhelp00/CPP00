@@ -3,13 +3,15 @@
 
 #include "Bureaucrat.hpp"
 
+class Bureaucrat;
+
 class Form
 {
 	private:
 				std::string const		_name;
 				bool					_isSigned;
-				int						_gradeToSign;
-				int						_gradeToExe;
+				int const				_gradeToSign;
+				int const				_gradeToExe;
 				
 	public:
 			Form();
@@ -33,6 +35,11 @@ class Form
 			};
 
 			class GradeTooHighException: public std::exception
+			{
+			virtual const char*	what() const throw();
+			};
+
+			class AlreadySignedException: public std::exception
 			{
 			virtual const char*	what() const throw();
 			};

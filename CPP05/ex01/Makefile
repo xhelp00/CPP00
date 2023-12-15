@@ -3,7 +3,7 @@ OBJS			= $(SRCS:.cpp=.o)
 CPP				= c++
 RM				= rm -f
 CPPFLAGS		= -Wall -Wextra -Werror -std=c++98
-NAME			= Bureaucrat
+NAME			= Form
 MAGENTA			= "\033[35m"
 GREEN			= "\033[32m"
 RED				= "\033[31m"

@@ -4,9 +4,12 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
+#include "Form.hpp"
 
 #define MAX_GRADE 1
 #define MIN_GRADE 150
+
+class Form;
 
 class Bureaucrat
 {
@@ -27,6 +30,9 @@ class Bureaucrat
 			void	gradeUp(int up);
 			void	gradeDown(int down);
 
+			//ex01
+			void signForm(Form &form) const;
+
 			class GradeTooLowException: public std::exception 
 			{
 			virtual const char*	what() const throw();
@@ -37,8 +43,7 @@ class Bureaucrat
 			virtual const char*	what() const throw();
 			};
 
-			//ex01
-			void signForm();
+			
 };
 
 std::ostream&	operator<<(std::ostream &o, const Bureaucrat& bureaucrat);
