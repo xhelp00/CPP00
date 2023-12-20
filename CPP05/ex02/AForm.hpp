@@ -5,20 +5,21 @@
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
-	private:
+	//not private 
+	protected:
 				std::string const		_name;
 				bool					_isSigned;
 				int const				_gradeToSign;
 				int const				_gradeToExe;
 				
 	public:
-			Form();
-			Form(const std::string& name, int gradeToSign, int gradeToExe);
-			Form(const Form& other);
-			Form& operator=(const Form &other);
-			~Form();
+			AForm();
+			AForm(const std::string& name, int gradeToSign, int gradeToExe);
+			AForm(const AForm& other);
+			AForm &operator=(const AForm &other);
+			~AForm();
 
 
 			const std::string&	getName() const;
@@ -26,8 +27,10 @@ class Form
 			int					getGradeSign() const;
 			int					getGradeExec() const;
 
-			// pure virtual method
-			virtual void beSigned(const Bureaucrat& bureaucrat) = 0;
+			// signing is always the same so I made it non virtual
+			void	beSigned(const Bureaucrat& bureaucrat);
+			// pure virtual method as every form has different execution therefore it will be overriden
+			virtual void	execute(const Bureaucrat& executor) const = 0;
 			
 
 			class GradeTooLowException: public std::exception 
@@ -45,9 +48,14 @@ class Form
 			virtual const char*	what() const throw();
 			};
 
+			class NotSignedException: public std::exception
+			{
+			virtual char const	*what(void) const throw();
+			};
+
 };
 
-std::ostream&	operator<<(std::ostream& o, const Form& form);
+std::ostream&	operator<<(std::ostream& o, const AForm& form);
 
 
 #endif

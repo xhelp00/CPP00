@@ -9,7 +9,7 @@
 #define MAX_GRADE 1
 #define MIN_GRADE 150
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -31,7 +31,7 @@ class Bureaucrat
 			void	gradeDown(int down);
 
 			//ex01
-			void signForm(Form &form) const;
+			void signForm(AForm &form) const;
 
 			class GradeTooLowException: public std::exception 
 			{
