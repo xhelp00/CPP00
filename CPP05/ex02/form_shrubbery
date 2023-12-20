@@ -9,8 +9,10 @@
 ├── Makefile
 ├── PresidentialPardonForm.cpp
 ├── PresidentialPardonForm.hpp
+├── PresidentialPardonForm.o
 ├── RobotomyRequestForm.cpp
 ├── RobotomyRequestForm.hpp
+├── RobotomyRequestForm.o
 ├── ShrubberyCreationForm.cpp
 ├── ShrubberyCreationForm.hpp
 ├── ShrubberyCreationForm.o
@@ -18,4 +20,4 @@
 ├── main.cpp
 └── main.o
 
-1 directory, 18 files
+1 directory, 20 files
