@@ -6,6 +6,9 @@
 ├── Bureaucrat.cpp
 ├── Bureaucrat.hpp
 ├── Bureaucrat.o
+├── form_shrubbery
+├── main.cpp
+├── main.o
 ├── Makefile
 ├── PresidentialPardonForm.cpp
 ├── PresidentialPardonForm.hpp
@@ -15,9 +18,6 @@
 ├── RobotomyRequestForm.o
 ├── ShrubberyCreationForm.cpp
 ├── ShrubberyCreationForm.hpp
-├── ShrubberyCreationForm.o
-├── form_shrubbery
-├── main.cpp
-└── main.o
+└── ShrubberyCreationForm.o
 
-1 directory, 20 files
+0 directories, 20 files

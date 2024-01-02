@@ -8,6 +8,7 @@ Otherwise, informs that the robotomy failed.
 
 #include "RobotomyRequestForm.hpp"
 #include "AForm.hpp"
+#include <cstdlib>
 
 RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 75, 45), _target("def")
 {}

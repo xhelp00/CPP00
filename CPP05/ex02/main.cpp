@@ -4,6 +4,7 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include <unistd.h> 
+#include <cstdlib>
 
 void	sectionTitle(const std::string& title)
 {
