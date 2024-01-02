@@ -23,8 +23,11 @@ int	main()
 	{
 		test = noob.makeForm("robotomy request", "Bender");
 		std::cout << *test << std::endl;
+		delete test;
 		test = noob.makeForm("presidential pardon", "Arthur Dent");
+		delete test;
 		test = noob.makeForm("shrubbery creation", "garden");
+		delete test;
 	}
 	catch (std::exception& e)
 	{
@@ -36,6 +39,7 @@ int	main()
 	{
 		test = noob.makeForm("resignation letter", "employee");
 		std::cout << *test << std::endl;
+		delete test;
 	}
 	catch (std::exception& e)
 	{

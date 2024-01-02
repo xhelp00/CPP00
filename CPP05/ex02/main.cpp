@@ -78,5 +78,23 @@ int	main()
 		std::cout << "Exception: " << e.what() << std::endl;
 	}
 
+	sectionTitle("president execution");
+	try
+	{
+		Bureaucrat	minister("minister", 1);
+		PresidentialPardonForm pardon("Evaluator");
+		
+		
+		std::cout << minister;
+		std::cout << pardon;
+	
+		pardon.beSigned(minister);
+		pardon.execute(minister);
+	}
+	catch (std::exception& e)
+	{
+		std::cout << "Exception: " << e.what() << std::endl;
+	}
+
 	return 0;
 }
