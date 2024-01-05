@@ -76,6 +76,7 @@
 		"cinttypes": "cpp",
 		"fstream": "cpp",
 		"thread": "cpp",
-		"stop_token": "cpp"
+		"stop_token": "cpp",
+		"ranges": "cpp"
 	}
 }
