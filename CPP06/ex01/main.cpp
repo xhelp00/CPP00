@@ -18,8 +18,8 @@ int main(int ac, char** av)
 		uintptr_t raw = Serializer::serialize(&data1);
 
 		std::cout << "Data binary representation: "  << std::bitset<64>(raw) << std::endl;
-		printf("%p\n", &data1);
-		printf("%lx\n", raw);
+		//printf("%p\n", &data1);
+		//printf("%lx\n", raw);
 
 		std::cout << "\nDeserializing...\n" << std::endl;
 		Data* data2 = Serializer::deserialize(raw);
