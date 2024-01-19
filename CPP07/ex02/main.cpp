@@ -29,6 +29,7 @@ int main(int, char**)
     }
     try
     {
+		std::cout << "Test: trying to set 0 to index -2 in array of numbers." << std::endl;
         numbers[-2] = 0;
     }
     catch(const std::exception& e)
@@ -37,6 +38,7 @@ int main(int, char**)
     }
     try
     {
+		std::cout << "Test: trying to set 0 to index MAX_VAL in array of numbers." << std::endl;
         numbers[MAX_VAL] = 0;
     }
     catch(const std::exception& e)

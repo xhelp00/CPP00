@@ -50,9 +50,9 @@ std::size_t Array<T>::size() const
 }
 
 template <typename T>
-T& Array<T>::operator[](std::size_t index)
+T& Array<T>::operator[](int index)
 {
-	if (index < 0 || index >= this->_size)
+	if (index < 0 || index >= static_cast<int>(this->_size))
 		throw InvalidIndexException();
 	return _ptr[index];
 }

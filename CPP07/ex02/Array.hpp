@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include <cstdlib> // for srand
+#include <ctime>   // for time
 
 
 template <typename T> class Array
@@ -19,7 +21,7 @@ template <typename T> class Array
 		~Array();
 
 		std::size_t		size() const;
-		T &operator[](std::size_t index);
+		T &operator[](int index);
 
 		class InvalidIndexException : public std::exception
 		{
