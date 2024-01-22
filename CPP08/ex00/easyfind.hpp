@@ -1,31 +1,29 @@
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#ifndef EASYFIND_HPP
+#define EASYFIND_HPP
 
 #include <iostream>
 #include <string>
+#include <algorithm>
+#include <vector>
+
+class NotFound : public std::exception //has to be defined before easyfind template or include .tpp file at the bottom of this file
+{
+	virtual const char *what() const throw()
+	{
+	return ("not found");
+	}
+};
 
 template <typename T>
-void	swap(T &a, T &b)
+void	easyfind(T const container, int n)
 {
-	T temp = a;
-	a = b;
-	b = temp;
+	if(std::find(container.begin(), container.end(), n) == container.end())
+		throw NotFound();
+	else
+		std::cout << "found" << std::endl;
+
 }
 
-template <typename T>
-T min(T a, T b)
-{
-	if (a < b)
-		return a;
-	return b;
-}
 
-template <typename T>
-T max(T a, T b)
-{
-	if (a > b)
-		return a;
-	return b;
-}
 
 #endif
